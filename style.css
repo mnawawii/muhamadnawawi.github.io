@@ -6,7 +6,6 @@ body {
 
 /* Latar belakang untuk section Beranda (Hero) */
 .hero-bg {
-    /* Menggunakan gambar lokal sebagai latar belakang */
     background-image: url('latar_belakang.JPG');
     background-size: cover;
     background-position: center;
@@ -17,7 +16,6 @@ body {
 .profile-picture {
     background-image: url('profile_1x1.png');
     background-size: cover;
-    /* Mengubah posisi vertikal gambar ke atas */
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -30,7 +28,6 @@ body {
     position: relative;
 }
 
-/* Menambahkan lapisan gelap di atas gambar latar kartu proyek */
 .project-card::after {
     content: '';
     position: absolute;
@@ -39,29 +36,18 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.75rem; /* Sesuai dengan rounded-xl */
+    border-radius: 0.75rem;
     z-index: 0;
 }
 
-/* Memastikan konten teks berada di atas lapisan gelap */
 .project-card > div {
     position: relative;
     z-index: 10;
 }
 
-/* Ganti nama file jika perlu agar sesuai dengan file Anda */
-.project-card-1 {
-    background-image: url('project-card-1.jpg'); 
-}
-
-.project-card-2 {
-    background-image: url('project-card-2.jpg');
-}
-
-.project-card-3 {
-    background-image: url('project-card-3.jpg');
-}
-
+.project-card-1 { background-image: url('project-card-1.jpg'); }
+.project-card-2 { background-image: url('project-card-2.jpg'); }
+.project-card-3 { background-image: url('project-card-3.jpg'); }
 
 /* Styling untuk modal */
 .modal {
@@ -70,4 +56,22 @@ body {
 
 .modal-content {
     transition: transform 0.3s ease;
+}
+
+/* Styling untuk Language Switcher */
+.lang-btn {
+    font-weight: 600;
+    color: #64748b; /* slate-500 */
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.lang-btn:hover {
+    color: #10b981; /* emerald-600 */
+}
+
+.lang-btn.active {
+    background-color: #10b981; /* emerald-600 */
+    color: white;
 }
