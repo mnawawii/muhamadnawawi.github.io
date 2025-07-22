@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Muhamad Nawawi</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-800">
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#">
+                <!-- Menggunakan foto profil sebagai logo -->
+                <img src="profile_1x1.png" alt="Logo Muhamad Nawawi" class="h-10 w-10 rounded-full object-cover">
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#beranda" class="text-slate-600 hover:text-emerald-600 transition-colors">Beranda</a>
+                <a href="#tentang" class="text-slate-600 hover:text-emerald-600 transition-colors">Tentang</a>
+                <a href="#proyek" class="text-slate-600 hover:text-emerald-600 transition-colors">Proyek</a>
+                <a href="#pengalaman" class="text-slate-600 hover:text-emerald-600 transition-colors">Pengalaman</a>
+                <a href="#kontak" class="text-slate-600 hover:text-emerald-600 transition-colors">Kontak</a>
+            </nav>
+            <a href="#kontak" class="hidden md:block bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all shadow-sm">
+                Hubungi Saya
+            </a>
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#beranda" class="block py-2 text-slate-600 hover:text-emerald-600">Beranda</a>
+            <a href="#tentang" class="block py-2 text-slate-600 hover:text-emerald-600">Tentang</a>
+            <a href="#proyek" class="block py-2 text-slate-600 hover:text-emerald-600">Proyek</a>
+            <a href="#pengalaman" class="block py-2 text-slate-600 hover:text-emerald-600">Pengalaman</a>
+            <a href="#kontak" class="block py-2 text-slate-600 hover:text-emerald-600">Kontak</a>
+            <a href="#kontak" class="block mt-2 text-center bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all shadow-sm">
+                Hubungi Saya
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section Beranda (Hero) -->
+        <section id="beranda" class="hero-bg relative min-h-[90vh] flex items-center text-white">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60"></div>
+            
+            <div class="relative z-10 container mx-auto px-6 py-16 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    Muhamad Nawawi
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl text-emerald-300 font-semibold">
+                    Peneliti Keanekaragaman Hayati & Analis Bioinformatika
+                </p>
+                <p class="mt-6 max-w-3xl mx-auto text-slate-200 text-lg">
+                    Lulusan Biologi Unpad dengan spesialisasi ekologi, genetika, dan bioinformatika. Saya mengaplikasikan analisis data dan teknik molekuler untuk mengungkap dan melestarikan keanekaragaman hayati.
+                </p>
+                <div class="mt-10 flex justify-center items-center gap-4">
+                    <a href="#proyek" class="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition-all shadow-lg transform hover:scale-105">
+                        Lihat Proyek Saya
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhamad-nawawi" target="_blank" class="text-slate-200 hover:text-white p-3 rounded-full transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                     <a href="mailto:muhamad.nawawi@outlook.com" class="text-slate-200 hover:text-white p-3 rounded-full transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Tentang Saya -->
+        <section id="tentang" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Tentang Saya</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-slate-600">Sebuah perjalanan dalam dunia biologi dan konservasi.</p>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 max-w-6xl mx-auto">
+                    <!-- Profile Image -->
+                    <div class="profile-picture flex-shrink-0 w-64 h-64 md:w-72 md:h-72 rounded-3xl shadow-xl border-4 border-white">
+                        <!-- Image is now a background, set in style.css -->
+                    </div>
+                    
+                    <!-- Text Content -->
+                    <div class="flex-1 text-center lg:text-left">
+                        <div class="space-y-4">
+                            <h3 class="text-3xl font-bold text-slate-800">Halo! Saya Muhamad Nawawi.</h3>
+                            <div class="text-lg text-slate-700 leading-relaxed space-y-3">
+                                <p>
+                                    Seorang Sarjana Biologi dari Universitas Padjadjaran (IPK 3.64) dengan ketertarikan mendalam pada kompleksitas kehidupan, yang membawa saya untuk fokus pada bidang ekologi, genetika, dan bioinformatika.
+                                </p>
+                                <p>
+                                    Pengalaman saya sebagai asisten laboratorium dan lapangan telah mengasah kemampuan saya dalam metodologi penelitian, analisis data menggunakan Python & R, serta teknik molekuler. Saya percaya bahwa pendekatan berbasis data adalah kunci untuk memahami dan melindungi ekosistem kita yang berharga.
+                                </p>
+                                 <p>
+                                    Saat ini, saya mencari kesempatan untuk mendedikasikan keahlian saya sebagai peneliti atau analis, dengan tujuan utama berkontribusi secara nyata dalam upaya konservasi keanekaragaman hayati di Indonesia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keterampilan -->
+                <div class="mt-20">
+                    <h3 class="text-2xl font-bold text-center text-slate-900 mb-8">Keterampilan Utama</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                        <!-- Keterampilan Teknis -->
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4 text-emerald-700 text-center md:text-left">Keterampilan Teknis (Hard Skills)</h4>
+                            <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">Python</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">R</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">QGIS</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">Bioinformatika (MEGA, BioEdit, BLAST)</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">PCR & Elektroforesis</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">Microsoft Office Suite</span>
+                                <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">Desain Grafis (Figma, Canva)</span>
+                            </div>
+                        </div>
+                        <!-- Keterampilan Non-Teknis -->
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4 text-sky-700 text-center md:text-left">Keterampilan Non-Teknis (Soft Skills)</h4>
+                            <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium">Komunikasi Ilmiah</span>
+                                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium">Kerja Sama Tim</span>
+                                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium">Pemecahan Masalah Analitis</span>
+                                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium">Manajemen Waktu & Proyek</span>
+                                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium">Kepemimpinan</span>
+                                <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium">Kemampuan Adaptasi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Proyek -->
+        <section id="proyek" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Proyek Unggulan & Studi Kasus</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-slate-600">Implementasi ilmu dan keahlian dalam proyek nyata.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Proyek 1: DNA Barcoding -->
+                    <div class="project-card project-card-1 relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 text-white flex flex-col">
+                        <div class="relative z-10 p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2">DNA Barcoding pada Madu</h3>
+                            <p class="text-slate-200 mb-4 text-sm flex-grow">Mengidentifikasi keanekaragaman tumbuhan pakan lebah melalui analisis DNA dari sampel madu.</p>
+                            <div class="mt-auto">
+                                <button data-modal-target="modal-proyek-1" class="open-modal-button w-full text-left font-semibold text-emerald-300 hover:text-white transition-colors">Baca Selengkapnya →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 2: Ekowisata Burung -->
+                    <div class="project-card project-card-2 relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 text-white flex flex-col">
+                        <div class="relative z-10 p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2">Studi Potensi Ekowisata Burung</h3>
+                            <p class="text-slate-200 mb-4 text-sm flex-grow">Analisis keanekaragaman spesies burung di Taman Buru Masigit Kareumbi untuk rekomendasi pengelolaan.</p>
+                            <div class="mt-auto">
+                                <button data-modal-target="modal-proyek-2" class="open-modal-button w-full text-left font-semibold text-emerald-300 hover:text-white transition-colors">Baca Selengkapnya →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 3: Freelance Admin -->
+                    <div class="project-card project-card-3 relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 text-white flex flex-col">
+                        <div class="relative z-10 p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2">Biodiversity Administrator</h3>
+                            <p class="text-slate-200 mb-4 text-sm flex-grow">Menyusun proposal, mengurus perizinan, dan koordinasi tim untuk proyek penelitian biodiversitas PT Olahkarsa.</p>
+                            <div class="mt-auto">
+                                <button data-modal-target="modal-proyek-3" class="open-modal-button w-full text-left font-semibold text-emerald-300 hover:text-white transition-colors">Baca Selengkapnya →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Pengalaman -->
+        <section id="pengalaman" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Pengalaman & Pendidikan</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-slate-600">Jejak langkah dalam dunia akademis dan profesional.</p>
+                </div>
+                <div class="relative max-w-3xl mx-auto">
+                    <!-- Garis Waktu Vertikal -->
+                    <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-slate-200"></div>
+                    
+                    <!-- Item Pengalaman -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full mt-1.5"></div>
+                        <div class="w-full md:w-1/2 md:pr-8 md:text-right">
+                            <p class="font-semibold text-emerald-700">Feb 2025 – Jun 2025</p>
+                            <h3 class="text-lg font-bold">Asisten Lapangan Ekologi Terestrial</h3>
+                            <p class="text-sm text-slate-500">Laboratorium Ekologi, Universitas Padjadjaran</p>
+                        </div>
+                    </div>
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full mt-1.5"></div>
+                        <div class="w-full md:w-1/2 md:ml-auto md:pl-8">
+                            <p class="font-semibold text-emerald-700">Sep 2024 – Jun 2025</p>
+                            <h3 class="text-lg font-bold">Asisten Lab Genetika & Biologi Molekuler</h3>
+                            <p class="text-sm text-slate-500">Lab Biosistematika dan Molekuler, Unpad</p>
+                        </div>
+                    </div>
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full mt-1.5"></div>
+                        <div class="w-full md:w-1/2 md:pr-8 md:text-right">
+                            <p class="font-semibold text-emerald-700">Jan 2025 – Mar 2025</p>
+                            <h3 class="text-lg font-bold">Freelance Biodiversity Administrator</h3>
+                            <p class="text-sm text-slate-500">PT Olahkarsa, Bandung</p>
+                        </div>
+                    </div>
+                     <!-- Item Pendidikan -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-sky-600 rounded-full mt-1.5"></div>
+                        <div class="w-full md:w-1/2 md:ml-auto md:pl-8">
+                            <p class="font-semibold text-sky-700">2021 - 2025</p>
+                            <h3 class="text-lg font-bold">Sarjana Sains, Biologi</h3>
+                            <p class="text-sm text-slate-500">Universitas Padjadjaran</p>
+                            <p class="text-sm text-slate-500">IPK 3.64/4.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Kontak -->
+        <section id="kontak" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 lg:p-16 max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Mari Berkolaborasi</h2>
+                    <p class="mt-4 text-slate-600 text-lg max-w-xl mx-auto">
+                        Saya terbuka untuk diskusi, proyek penelitian, atau peluang karier di bidang konservasi dan bioinformatika. Jangan ragu untuk menghubungi saya.
+                    </p>
+                    <div class="mt-8">
+                        <a href="mailto:muhamad.nawawi@outlook.com" class="inline-block bg-emerald-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition-all shadow-lg transform hover:scale-105">
+                            Kirim Email
+                        </a>
+                    </div>
+                    <div class="mt-10 text-slate-500">
+                        <p>Bandung, Indonesia</p>
+                        <p>+62 851-5665-4778</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Muhamad Nawawi. Dibuat dengan semangat konservasi.</p>
+        </div>
+    </footer>
+
+    <!-- Modals untuk Detail Proyek -->
+    <!-- Modal 1 -->
+    <div id="modal-proyek-1" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold">Studi Kasus: DNA Barcoding pada Madu</h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-slate-700">
+                <p><strong>Ringkasan:</strong> Penelitian skripsi ini bertujuan untuk mengidentifikasi keanekaragaman tumbuhan pakan lebah secara akurat melalui analisis DNA (DNA Barcoding) yang diekstraksi dari sampel madu.</p>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-emerald-700">Masalah</h4>
+                    <p>Identifikasi visual tumbuhan pakan lebah di lapangan seringkali sulit dan tidak lengkap. Madu, sebagai produk yang mengandung DNA dari nektar, menawarkan metode identifikasi yang lebih komprehensif dan efisien.</p>
+                </div>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-emerald-700">Peran Saya</h4>
+                    <p>Sebagai peneliti utama, saya bertanggung jawab penuh atas seluruh tahapan penelitian, mulai dari desain metodologi, pengumpulan sampel, analisis laboratorium, hingga interpretasi data dan penulisan laporan akhir.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-emerald-700">Proses & Solusi</h4>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><b>Pengumpulan Sampel:</b> Mengambil sampel madu dari berbagai lokasi peternakan lebah.</li>
+                        <li><b>Analisis Laboratorium:</b> Melakukan isolasi DNA dari madu, dilanjutkan dengan amplifikasi gen target menggunakan Polymerase Chain Reaction (PCR).</li>
+                        <li><b>Analisis Bioinformatika:</b> Menganalisis sekuens DNA menggunakan perangkat lunak seperti MEGA dan BioEdit, serta mencocokkannya dengan database global (BLAST) untuk identifikasi spesies.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-emerald-700">Hasil & Dampak</h4>
+                    <p>Berhasil menyusun laporan penelitian teknis yang komprehensif. Penelitian ini menunjukkan potensi besar DNA barcoding sebagai alat monitoring keanekaragaman hayati yang efisien dan non-invasif, serta memberikan data dasar bagi strategi konservasi polinator.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal-proyek-2" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold">Studi Kasus: Potensi Ekowisata Burung</h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+             <div class="space-y-4 text-slate-700">
+                <p><strong>Ringkasan:</strong> Proyek observasi lapangan ini bertujuan untuk mengidentifikasi dan menganalisis keanekaragaman spesies burung di Kawasan Konservasi Taman Buru Masigit Kareumbi sebagai dasar pengembangan potensi ekowisata.</p>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-sky-700">Masalah</h4>
+                    <p>Kawasan konservasi memiliki potensi ekowisata yang belum tergali maksimal. Diperlukan data ilmiah mengenai keanekaragaman hayati (khususnya burung) untuk merancang program ekowisata yang berkelanjutan dan tidak merusak lingkungan.</p>
+                </div>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-sky-700">Proses & Solusi</h4>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><b>Observasi Lapangan:</b> Menggunakan metode point count dan transek untuk mengumpulkan data kehadiran dan kelimpahan spesies burung.</li>
+                        <li><b>Analisis Data:</b> Menganalisis data untuk menghitung indeks keanekaragaman (misalnya, Shannon-Wiener) dan mengidentifikasi spesies kunci yang menarik bagi wisatawan.</li>
+                        <li><b>Pemetaan:</b> Menggunakan QGIS untuk memetakan titik-titik pengamatan dan area dengan keanekaragaman tinggi.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-sky-700">Hasil & Dampak</h4>
+                    <p>Menghasilkan laporan observasi yang komprehensif, lengkap dengan data, analisis, dan peta. Laporan ini memberikan rekomendasi konkret untuk pengelolaan kawasan, seperti pembuatan jalur pengamatan burung dan pengembangan program pemandu wisata lokal, yang dapat meningkatkan nilai ekonomi kawasan sekaligus mendukung upaya konservasi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 3 -->
+    <div id="modal-proyek-3" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold">Studi Kasus: Biodiversity Administrator</h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-slate-700">
+                <p><strong>Ringkasan:</strong> Berperan sebagai Freelance Biodiversity Administrator untuk PT Olahkarsa, mendukung perencanaan dan administrasi proyek penelitian keanekaragaman hayati.</p>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-indigo-700">Masalah</h4>
+                    <p>PT Olahkarsa membutuhkan dukungan teknis dalam menyusun proposal penelitian yang solid, memastikan kepatuhan terhadap regulasi pemerintah, dan mengkoordinasikan tim untuk kelancaran proyek di lapangan.</p>
+                </div>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-indigo-700">Peran & Tanggung Jawab</h4>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><b>Penyusunan Proposal:</b> Merancang dan menulis proposal penelitian keanekaragaman hayati yang terstruktur dan sistematis.</li>
+                        <li><b>Koordinasi Regulasi:</b> Berkomunikasi dan berkoordinasi dengan instansi pemerintah untuk mengurus proses perizinan penelitian.</li>
+                        <li><b>Manajemen Tim:</b> Berkontribusi dalam proses rekrutmen peneliti lapangan dan berkoordinasi dengan tim teknis untuk memastikan semua kebutuhan proyek terpenuhi.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-indigo-700">Hasil & Dampak</h4>
+                    <p>Berhasil menyusun proposal yang komprehensif dan membantu kelancaran proses perizinan. Pengalaman ini menunjukkan kemampuan saya untuk bekerja dalam lingkungan profesional, mengelola aspek administratif proyek ilmiah, dan berkolaborasi dengan berbagai pemangku kepentingan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

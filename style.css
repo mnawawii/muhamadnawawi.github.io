@@ -1,0 +1,73 @@
+/* Menggunakan font Inter sebagai default */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* slate-50 */
+}
+
+/* Latar belakang untuk section Beranda (Hero) */
+.hero-bg {
+    /* Menggunakan gambar lokal sebagai latar belakang */
+    background-image: url('latar_belakang.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling untuk foto profil agar tidak terpotong */
+.profile-picture {
+    background-image: url('profile_1x1.png');
+    background-size: cover;
+    /* Mengubah posisi vertikal gambar ke atas */
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+/* Styling untuk kartu proyek */
+.project-card {
+    min-height: 380px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Menambahkan lapisan gelap di atas gambar latar kartu proyek */
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.75rem; /* Sesuai dengan rounded-xl */
+    z-index: 0;
+}
+
+/* Memastikan konten teks berada di atas lapisan gelap */
+.project-card > div {
+    position: relative;
+    z-index: 10;
+}
+
+/* Ganti nama file jika perlu agar sesuai dengan file Anda */
+.project-card-1 {
+    background-image: url('project-card-1.jpg'); 
+}
+
+.project-card-2 {
+    background-image: url('project-card-2.jpg');
+}
+
+.project-card-3 {
+    background-image: url('project-card-3.jpg');
+}
+
+
+/* Styling untuk modal */
+.modal {
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    transition: transform 0.3s ease;
+}
