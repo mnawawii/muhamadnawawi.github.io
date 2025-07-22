@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Muhamad Nawawi</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-800">
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#">
+                <img src="profile_1x1.png" alt="Logo Muhamad Nawawi" class="h-10 w-10 rounded-full object-cover">
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#beranda" data-key="navHome" class="text-slate-600 hover:text-emerald-600 transition-colors"></a>
+                <a href="#tentang" data-key="navAbout" class="text-slate-600 hover:text-emerald-600 transition-colors"></a>
+                <a href="#proyek" data-key="navProjects" class="text-slate-600 hover:text-emerald-600 transition-colors"></a>
+                <a href="#pengalaman" data-key="navExperience" class="text-slate-600 hover:text-emerald-600 transition-colors"></a>
+                <a href="#kontak" data-key="navContact" class="text-slate-600 hover:text-emerald-600 transition-colors"></a>
+                <!-- Language Switcher -->
+                <div class="flex space-x-2 border-l pl-6">
+                    <button id="lang-en" class="lang-btn active">EN</button>
+                    <button id="lang-id" class="lang-btn">ID</button>
+                </div>
+            </nav>
+            <a href="#kontak" data-key="contactMeBtn" class="hidden md:block bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all shadow-sm"></a>
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#beranda" data-key="navHomeMobile" class="block py-2 text-slate-600 hover:text-emerald-600"></a>
+            <a href="#tentang" data-key="navAboutMobile" class="block py-2 text-slate-600 hover:text-emerald-600"></a>
+            <a href="#proyek" data-key="navProjectsMobile" class="block py-2 text-slate-600 hover:text-emerald-600"></a>
+            <a href="#pengalaman" data-key="navExperienceMobile" class="block py-2 text-slate-600 hover:text-emerald-600"></a>
+            <a href="#kontak" data-key="navContactMobile" class="block py-2 text-slate-600 hover:text-emerald-600"></a>
+            <a href="#kontak" data-key="contactMeBtnMobile" class="block mt-2 text-center bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all shadow-sm"></a>
+             <!-- Language Switcher Mobile -->
+             <div class="flex justify-center space-x-4 mt-4 border-t pt-4">
+                <button id="lang-en-mobile" class="lang-btn active">EN</button>
+                <button id="lang-id-mobile" class="lang-btn">ID</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section Beranda (Hero) -->
+        <section id="beranda" class="hero-bg relative min-h-[90vh] flex items-center text-white">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 container mx-auto px-6 py-16 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight" data-key="heroName"></h1>
+                <p class="mt-4 text-xl md:text-2xl text-emerald-300 font-semibold" data-key="heroTitle"></p>
+                <p class="mt-6 max-w-3xl mx-auto text-slate-200 text-lg" data-key="heroSubtitle"></p>
+                <div class="mt-10 flex justify-center items-center gap-4">
+                    <a href="#proyek" class="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition-all shadow-lg transform hover:scale-105" data-key="viewProjectsBtn"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Tentang Saya -->
+        <section id="tentang" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900" data-key="aboutTitle"></h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-slate-600" data-key="aboutSubtitle"></p>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 max-w-6xl mx-auto">
+                    <div class="profile-picture flex-shrink-0 w-64 h-64 md:w-72 md:h-72 rounded-3xl shadow-xl border-4 border-white"></div>
+                    <div class="flex-1 text-center lg:text-left">
+                        <div class="space-y-4">
+                            <h3 class="text-3xl font-bold text-slate-800" data-key="aboutGreeting"></h3>
+                            <div class="text-lg text-slate-700 leading-relaxed space-y-3">
+                                <p data-key="aboutP1"></p>
+                                <p data-key="aboutP2"></p>
+                                <p data-key="aboutP3"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Mata Kuliah Relevan -->
+        <section id="matakuliah" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900" data-key="courseworkTitle"></h2>
+                </div>
+                <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course1"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course2"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course3"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course4"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course5"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course6"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course7"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course8"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course9"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course10"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course11"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course12"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course13"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course14"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course15"></p></div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm"><p data-key="course16"></p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Keterampilan -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900" data-key="skillsTitle"></h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4 text-emerald-700 text-center md:text-left" data-key="hardSkills"></h4>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">Python</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">R</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">QGIS</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">Bioinformatics (MEGA, BioEdit, BLAST)</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">PCR & Electrophoresis</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">Microsoft Office Suite</span>
+                            <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full font-medium">Graphic Design (Figma, Canva)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4 text-sky-700 text-center md:text-left" data-key="softSkills"></h4>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                            <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium" data-key="skillComm"></span>
+                            <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium" data-key="skillTeam"></span>
+                            <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium" data-key="skillProblem"></span>
+                            <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium" data-key="skillTime"></span>
+                            <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium" data-key="skillLead"></span>
+                            <span class="bg-sky-100 text-sky-800 px-3 py-1 rounded-full font-medium" data-key="skillAdapt"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Proyek -->
+        <section id="proyek" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900" data-key="projectsTitle"></h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-slate-600" data-key="projectsSubtitle"></p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card project-card-1 relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 text-white flex flex-col">
+                        <div class="relative z-10 p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2" data-key="project1Title"></h3>
+                            <p class="text-slate-200 mb-4 text-sm flex-grow" data-key="project1Desc"></p>
+                            <div class="mt-auto">
+                                <button data-modal-target="modal-proyek-1" class="open-modal-button w-full text-left font-semibold text-emerald-300 hover:text-white transition-colors" data-key="readMore"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card project-card-2 relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 text-white flex flex-col">
+                         <div class="relative z-10 p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2" data-key="project2Title"></h3>
+                            <p class="text-slate-200 mb-4 text-sm flex-grow" data-key="project2Desc"></p>
+                            <div class="mt-auto">
+                                <button data-modal-target="modal-proyek-2" class="open-modal-button w-full text-left font-semibold text-emerald-300 hover:text-white transition-colors" data-key="readMore2"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card project-card-3 relative rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300 text-white flex flex-col">
+                        <div class="relative z-10 p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold mb-2" data-key="project3Title"></h3>
+                            <p class="text-slate-200 mb-4 text-sm flex-grow" data-key="project3Desc"></p>
+                            <div class="mt-auto">
+                                <button data-modal-target="modal-proyek-3" class="open-modal-button w-full text-left font-semibold text-emerald-300 hover:text-white transition-colors" data-key="readMore3"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Pengalaman -->
+        <section id="pengalaman" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900" data-key="expTitle"></h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-slate-600" data-key="expSubtitle"></p>
+                </div>
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-slate-200"></div>
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full mt-1.5"></div>
+                        <div class="w-full md:w-1/2 md:pr-8 md:text-right">
+                            <p class="font-semibold text-emerald-700">Feb 2025 – Jun 2025</p>
+                            <h3 class="text-lg font-bold" data-key="exp1Title"></h3>
+                            <p class="text-sm text-slate-500" data-key="exp1Company"></p>
+                            <button data-modal-target="modal-exp-1" class="open-modal-button text-sm text-emerald-600 hover:underline mt-1" data-key="viewDetails"></button>
+                        </div>
+                    </div>
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full mt-1.5"></div>
+                        <div class="w-full md:w-1/2 md:ml-auto md:pl-8">
+                            <p class="font-semibold text-emerald-700">Sep 2024 – Jun 2025</p>
+                            <h3 class="text-lg font-bold" data-key="exp2Title"></h3>
+                            <p class="text-sm text-slate-500" data-key="exp2Company"></p>
+                            <button data-modal-target="modal-exp-2" class="open-modal-button text-sm text-emerald-600 hover:underline mt-1" data-key="viewDetails2"></button>
+                        </div>
+                    </div>
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full mt-1.5"></div>
+                        <div class="w-full md:w-1/2 md:pr-8 md:text-right">
+                            <p class="font-semibold text-emerald-700">Jan 2025 – Mar 2025</p>
+                            <h3 class="text-lg font-bold" data-key="exp3Title"></h3>
+                            <p class="text-sm text-slate-500" data-key="exp3Company"></p>
+                            <button data-modal-target="modal-exp-3" class="open-modal-button text-sm text-emerald-600 hover:underline mt-1" data-key="viewDetails3"></button>
+                        </div>
+                    </div>
+                    <div class="relative mb-12">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-sky-600 rounded-full mt-1.5"></div>
+                        <div class="w-full md:w-1/2 md:ml-auto md:pl-8">
+                            <p class="font-semibold text-sky-700">2021 - 2025</p>
+                            <h3 class="text-lg font-bold" data-key="eduTitle"></h3>
+                            <p class="text-sm text-slate-500" data-key="eduCompany"></p>
+                            <p class="text-sm text-slate-500">GPA 3.64/4.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Pencapaian & Sertifikasi -->
+        <section id="pencapaian" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900" data-key="achievementsTitle"></h2>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2 text-emerald-700" data-key="achievement1Title"></h3>
+                        <p class="text-slate-600" data-key="achievement1Desc"></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2 text-emerald-700" data-key="achievement2Title"></h3>
+                        <p class="text-slate-600" data-key="achievement2Desc"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Kontak -->
+        <section id="kontak" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 lg:p-16 max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900" data-key="contactTitle"></h2>
+                    <p class="mt-4 text-slate-600 text-lg max-w-xl mx-auto" data-key="contactSubtitle"></p>
+                    <div class="mt-8">
+                        <a href="mailto:muhamad.nawawi@outlook.com" class="inline-block bg-emerald-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition-all shadow-lg transform hover:scale-105" data-key="sendEmailBtn"></a>
+                    </div>
+                    <div class="mt-10 text-slate-500">
+                        <p data-key="contactLocation"></p>
+                        <p data-key="contactPhone"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p data-key="footerText"></p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal-proyek-1" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold" data-key="modal1Title"></h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-slate-700">
+                <p><strong data-key="modalSummary"></strong> <span data-key="modal1Summary"></span></p>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-emerald-700" data-key="modalProblem"></h4>
+                    <p data-key="modal1Problem"></p>
+                </div>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-emerald-700" data-key="modalRole"></h4>
+                    <p data-key="modal1Role"></p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-emerald-700" data-key="modalProcess"></h4>
+                    <ul class="list-disc list-inside space-y-2" data-key="modal1Process"></ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-emerald-700" data-key="modalResult"></h4>
+                    <p data-key="modal1Result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-proyek-2" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold" data-key="modal2Title"></h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-slate-700">
+                 <p><strong data-key="modalSummary2"></strong> <span data-key="modal2Summary"></span></p>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-sky-700" data-key="modalProblem2"></h4>
+                    <p data-key="modal2Problem"></p>
+                </div>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-sky-700" data-key="modalProcess2"></h4>
+                    <ul class="list-disc list-inside space-y-2" data-key="modal2Process"></ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-sky-700" data-key="modalResult2"></h4>
+                    <p data-key="modal2Result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-proyek-3" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+         <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold" data-key="modal3Title"></h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-slate-700">
+                <p><strong data-key="modalSummary3"></strong> <span data-key="modal3Summary"></span></p>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-indigo-700" data-key="modalProblem3"></h4>
+                    <p data-key="modal3Problem"></p>
+                </div>
+                 <div>
+                    <h4 class="font-semibold text-lg mb-2 text-indigo-700" data-key="modalRole3"></h4>
+                    <ul class="list-disc list-inside space-y-2" data-key="modal3Role"></ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-2 text-indigo-700" data-key="modalResult3"></h4>
+                    <p data-key="modal3Result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-exp-1" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold" data-key="exp1Title"></h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-slate-700">
+                <h4 class="font-semibold text-lg text-emerald-700" data-key="responsibilities"></h4>
+                <ul class="list-disc list-inside space-y-2" data-key="exp1Details"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="modal-exp-2" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold" data-key="exp2Title"></h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-slate-700">
+                <h4 class="font-semibold text-lg text-emerald-700" data-key="responsibilities2"></h4>
+                <ul class="list-disc list-inside space-y-2" data-key="exp2Details"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="modal-exp-3" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto p-8 transform scale-95">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="text-2xl font-bold" data-key="exp3Title"></h3>
+                <button class="close-modal-button text-3xl text-slate-500 hover:text-slate-800">&times;</button>
+            </div>
+            <div class="space-y-4 text-slate-700">
+                <h4 class="font-semibold text-lg text-emerald-700" data-key="responsibilities3"></h4>
+                <ul class="list-disc list-inside space-y-2" data-key="exp3Details"></ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

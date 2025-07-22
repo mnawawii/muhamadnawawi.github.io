@@ -1,0 +1,77 @@
+/* Menggunakan font Inter sebagai default */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* slate-50 */
+}
+
+/* Latar belakang untuk section Beranda (Hero) */
+.hero-bg {
+    background-image: url('latar_belakang.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling untuk foto profil agar tidak terpotong */
+.profile-picture {
+    background-image: url('profile_1x1.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+/* Styling untuk kartu proyek */
+.project-card {
+    min-height: 380px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.75rem;
+    z-index: 0;
+}
+
+.project-card > div {
+    position: relative;
+    z-index: 10;
+}
+
+.project-card-1 { background-image: url('project-card-1.jpg'); }
+.project-card-2 { background-image: url('project-card-2.jpg'); }
+.project-card-3 { background-image: url('project-card-3.jpg'); }
+
+/* Styling untuk modal */
+.modal {
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    transition: transform 0.3s ease;
+}
+
+/* Styling untuk Language Switcher */
+.lang-btn {
+    font-weight: 600;
+    color: #64748b; /* slate-500 */
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.lang-btn:hover {
+    color: #10b981; /* emerald-600 */
+}
+
+.lang-btn.active {
+    background-color: #10b981; /* emerald-600 */
+    color: white;
+}
